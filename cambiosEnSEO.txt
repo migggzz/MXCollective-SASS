@@ -2,5 +2,13 @@ En index.html:
 SEO "MX Collective is a group of like minded artist from different backgrounds that connect unique art with blockchain technology. Owning an NFT from MX Collective makes you a part of our DAO, with exclusive benefits and rights"
 
 En art.html:
-SEO "the MX Collective art section is a showcase of our Artist's work, each piece of art you see has a clasical physical form along with a digital version stored on IPFS as an NFT"
+SEO "The MX Collective art section is a showcase of our Artist's work, each piece of art you see has a clasical physical form along with a digital version stored on IPFS as an NFT"
 
+En tattoo.html:
+SEO: "MX Collective Tattoo artist offer their customers a complete digital and physical experience, every tattoo that is bought includes an NFT of the model, some models will also be animated"
+
+En music.html:
+SEO: "MX Collective music artist offer our customer new songs and samples in the form of NFT's, members of our DAO get exclusive sneak peeks at new content for each musician"
+
+En events.html:
+SEO: "NFT holders for any of out projects become a part of our DAO. DAO members have exclusive access to events and streams that are done in different countries"
