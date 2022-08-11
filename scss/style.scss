@@ -1,15 +1,13 @@
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 200px;
-    background-color: rgb(155, 20, 20);
+    grid-area: header;
+
+    width: auto;
+    height: auto;
+    background-image: linear-gradient(to bottom, #243B55 0%, #141E30 100%);
     .menuHeader{
         ul{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
@@ -20,6 +18,7 @@ header {
             a{
                 color: white;
                 text-decoration: none;
+                font-family: 'Silkscreen', cursive;
                 .navImage{
                     height: 60px;
                     border-radius: 50%;
@@ -30,7 +29,8 @@ header {
 }
 
 footer{
-    background-color: red;
+    grid-area: footer;
+    background-image: linear-gradient(to bottom, #243B55 0%, #141E30 100%);
     padding:0px;
     ul{
         display: flex;
@@ -49,4 +49,117 @@ footer{
             }
         }
     }
+}
+
+.flexContainer1{
+    grid-area: cosa;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.flexContainer3{
+    @extend .flexContainer1;
+    grid-area: cosa3;
+    padding: 30px;
+    height:auto;
+}
+
+.flexContainer2{
+    @extend .flexContainer1;
+    grid-area: cosa2;
+    padding: 30px;
+    height: auto;
+    flex-wrap: nowrap;
+    div{
+        padding: 30px;
+        margin: 20px;
+        background-color: rgb(206, 212, 218);
+        border-radius: 50%;
+    }
+}
+
+.intro{
+    grid-area: introduccion;
+}
+
+.uno{
+    text-align: center;
+    color:white;
+    font-family: 'Silkscreen', cursive;
+}
+
+body{
+    background-image: linear-gradient(to top, #243B55 0%, #141E30 100%);
+}
+
+.gridIndex{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "header"
+    "introduccion"
+    "caru"
+    "cosa3"
+    "cosa2"
+    "footer"
+    ;
+    gap: 20px;
+}
+
+@media (min-width: 768px){
+    .gridIndex{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "header header header"
+        "introduccion introduccion introduccion"
+        "caru caru caru"
+        "cosa cosa cosa"
+        "cosa3 cosa3 cosa3"
+        "cosa2 cosa2 cosa2"
+        "footer footer footer"
+        ;
+    }
+    .flexContainer1{
+        flex-direction: row;
+    }
+    .therteee{
+        height: 100%;
+        width: 50%;
+    }
+    header{
+        .menuHeader{
+            ul{
+                flex-direction: row;
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 1200px){
+    .gridIndex{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "header header header"
+        "introduccion introduccion introduccion"
+        "caru caru ."
+        "cosa cosa cosa"
+        "cosa3 cosa3 cosa3"
+        "cosa2 cosa2 cosa2"
+        "footer footer footer"
+        ;
+    }
+}
+
+.therteee{
+    justify-self: center;
+    grid-area: caru;
+    height: 75%;
+    width: 50%;
 }

@@ -1,0 +1,6 @@
+En index.html:
+SEO "MX Collective is a group of like minded artist from different backgrounds that connect unique art with blockchain technology. Owning an NFT from MX Collective makes you a part of our DAO, with exclusive benefits and rights"
+
+En art.html:
+SEO "the MX Collective art section is a showcase of our Artist's work, each piece of art you see has a clasical physical form along with a digital version stored on IPFS as an NFT"
+
