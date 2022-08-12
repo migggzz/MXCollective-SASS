@@ -19,6 +19,7 @@ header .menuHeader li a {
   color: white;
   text-decoration: none;
   font-family: "Silkscreen", cursive;
+  font-size: large;
 }
 header .menuHeader li a .navImage {
   height: 60px;
@@ -48,7 +49,7 @@ footer ul li a .footerImage {
   height: 40px;
 }
 
-.flexContainer1, .flexContainer2, .flexContainer3 {
+.flexContainer1, .arte2, .flexContainer2, .flexContainer3 {
   grid-area: cosa;
   display: flex;
   flex-direction: column;
@@ -73,7 +74,7 @@ footer ul li a .footerImage {
 .flexContainer2 div {
   padding: 30px;
   margin: 20px;
-  background-color: rgb(206, 212, 218);
+  background-color: linear-gradient(90deg, #243B55 0%, #334756 100%);
   border-radius: 50%;
 }
 
@@ -91,10 +92,110 @@ body {
   background-image: linear-gradient(to top, #243B55 0%, #141E30 100%);
 }
 
+.therteee {
+  justify-self: center;
+  grid-area: caru;
+  height: 75%;
+  width: 50%;
+}
+
+.extra {
+  grid-area: extra;
+}
+
+.arte2 {
+  grid-area: arte;
+  display: row;
+}
+.arte2 div {
+  margin: 10px;
+}
+.arte2 img {
+  height: 90%;
+  width: 90%;
+}
+
+.tattooer {
+  grid-area: artista;
+}
+.tattooer img {
+  height: 100%;
+  width: 100%;
+}
+
+.tattooerInfo {
+  grid-area: info;
+  color: white;
+}
+
+.tatuajes {
+  grid-area: tatuajes;
+}
+.tatuajes img {
+  height: fit-content;
+  width: fit-content;
+}
+
+.pad {
+  margin: 20px;
+  padding: 20px;
+}
+
+.musico {
+  grid-area: musico;
+}
+.musico img {
+  width: 100%;
+  height: 100%;
+}
+
+.uno {
+  color: white;
+}
+
+.info {
+  grid-area: info;
+  color: white;
+}
+
+.musicTrack1 {
+  grid-area: cancion1;
+}
+
+.star {
+  padding-top: 30px;
+  width: 100%;
+}
+
+.musicTrack2 {
+  grid-area: cancion2;
+}
+
 .gridIndex {
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "header" "introduccion" "caru" "cosa3" "cosa2" "footer";
+  grid-template-areas: "header" "introduccion" "caru" "extra" "cosa3" "cosa2" "footer";
+  gap: 20px;
+}
+
+.gridArt {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "introduccion" "artista" "info" "tatuajes" "tatuajes" "tatuajes" "footer";
+  gap: 20px;
+}
+
+.gridArt2 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "introduccion" "arte" "arte" "footer";
+  gap: 20px;
+}
+
+.gridMusic {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "introduccion" "musico" "info" "cancion1" "cancion2" "footer";
   gap: 20px;
 }
 
@@ -102,9 +203,9 @@ body {
   .gridIndex {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "header header header" "introduccion introduccion introduccion" "caru caru caru" "cosa cosa cosa" "cosa3 cosa3 cosa3" "cosa2 cosa2 cosa2" "footer footer footer";
+    grid-template-areas: "header header header" "introduccion introduccion introduccion" "caru caru extra" "cosa cosa cosa" "cosa3 cosa3 cosa3" "cosa2 cosa2 cosa2" "footer footer footer";
   }
-  .flexContainer1, .flexContainer3, .flexContainer2 {
+  .flexContainer1, .flexContainer3, .flexContainer2, .arte2 {
     flex-direction: row;
   }
   .therteee {
@@ -114,19 +215,48 @@ body {
   header .menuHeader ul {
     flex-direction: row;
   }
+  .gridArt2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "header header header" "introduccion introduccion introduccion" "arte arte arte" "arte arte arte" "footer footer footer";
+    gap: 20px;
+  }
+  .gridArt {
+    display: grid;
+    grid-template-columns: 1fr, 11r, 1fr, 1fr;
+    grid-template-areas: "header header header header" "introduccion introduccion introduccion introducion" "artista tatuajes tatuajes tatuajes" "artista tatuajes tatuajes tatuajes" "info tatuajes tatuajes tatuajes" "footer footer footer footer";
+    gap: 20px;
+  }
+  .tatuajes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .gridMusic {
+    display: grid;
+    grid-template-columns: 2fr, 1fr, 1fr;
+    grid-template-areas: "header header header" "introduccion introduccion introduccion" "musico cancion1 cancion1" "info cancion2 cancion2" "footer footer footer";
+    gap: 20px;
+  }
+  .musico img {
+    height: 100%;
+    width: 100%;
+  }
+  .tatuajes img {
+    width: 300px;
+    height: 400px;
+  }
+  .tattooer img {
+    width: 100%;
+    height: 100%;
+  }
 }
 @media (min-width: 1020px) {
   .gridIndex {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "header header header" "introduccion introduccion introduccion" "caru caru ." "cosa cosa cosa" "cosa3 cosa3 cosa3" "cosa2 cosa2 cosa2" "footer footer footer";
+    grid-template-areas: "header header header" "introduccion introduccion introduccion" "caru caru extra" "cosa cosa cosa" "cosa3 cosa3 cosa3" "cosa2 cosa2 cosa2" "footer footer footer";
   }
-}
-.therteee {
-  justify-self: center;
-  grid-area: caru;
-  height: 75%;
-  width: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */

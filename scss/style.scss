@@ -19,6 +19,7 @@ header {
                 color: white;
                 text-decoration: none;
                 font-family: 'Silkscreen', cursive;
+                font-size:large;
                 .navImage{
                     height: 60px;
                     border-radius: 50%;
@@ -77,7 +78,7 @@ footer{
     div{
         padding: 30px;
         margin: 20px;
-        background-color: rgb(206, 212, 218);
+        background-color: linear-gradient(90deg, #243B55 0%, #334756 100%);
         border-radius: 50%;
     }
 }
@@ -96,6 +97,81 @@ body{
     background-image: linear-gradient(to top, #243B55 0%, #141E30 100%);
 }
 
+.therteee{
+    justify-self: center;
+    grid-area: caru;
+    height: 75%;
+    width: 50%;
+}
+
+.extra{
+    grid-area: extra;
+}
+
+.arte2{
+    @extend .flexContainer1;
+    grid-area: arte;
+    display:row;
+    div{
+        margin:10px;
+    }
+    img{
+        height:90%;
+        width:90%;
+    }
+}
+
+.tattooer{
+    grid-area: artista;
+   img{
+    height:100%;
+    width: 100%;
+   }
+}
+
+.tattooerInfo{
+    grid-area: info;
+    color: white;
+}
+.tatuajes{
+    grid-area: tatuajes;
+    img{
+        height:fit-content;
+        width:fit-content;
+    }
+}
+
+.pad{
+    margin:20px;
+    padding:20px;
+}
+
+.musico{
+    grid-area: musico;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.uno{
+    color:white;
+}
+
+.info{
+    grid-area: info;
+    color: white;
+}
+.musicTrack1{
+    grid-area: cancion1;
+}
+.star{
+    padding-top: 30px;
+    width: 100%;
+}
+.musicTrack2{
+    grid-area: cancion2;
+}
+
 .gridIndex{
     display: grid;
     grid-template-columns: auto;
@@ -103,8 +179,54 @@ body{
     "header"
     "introduccion"
     "caru"
+    "extra"
     "cosa3"
     "cosa2"
+    "footer"
+    ;
+    gap: 20px;
+}
+
+
+.gridArt {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "header"
+    "introduccion"
+    "artista"
+    "info"
+    "tatuajes"
+    "tatuajes"
+    "tatuajes"
+    "footer"
+    ;
+    gap: 20px;
+}
+
+.gridArt2 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "header"
+    "introduccion"
+    "arte"
+    "arte"
+    "footer"
+    ;
+    gap: 20px;
+}
+
+.gridMusic {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "header"
+    "introduccion"
+    "musico"
+    "info"
+    "cancion1"
+    "cancion2"
     "footer"
     ;
     gap: 20px;
@@ -117,7 +239,7 @@ body{
         grid-template-areas: 
         "header header header"
         "introduccion introduccion introduccion"
-        "caru caru caru"
+        "caru caru extra"
         "cosa cosa cosa"
         "cosa3 cosa3 cosa3"
         "cosa2 cosa2 cosa2"
@@ -138,6 +260,73 @@ body{
             }
         }
     }
+
+    .gridArt2{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "header header header"
+        "introduccion introduccion introduccion"
+        "arte arte arte"
+        "arte arte arte"
+        "footer footer footer"
+        ;
+        gap: 20px;
+    }
+
+    .gridArt {
+        display: grid;
+        grid-template-columns: 1fr,11r,1fr,1fr;
+        grid-template-areas: 
+        "header header header header"
+        "introduccion introduccion introduccion introducion"
+        "artista tatuajes tatuajes tatuajes"
+        "artista tatuajes tatuajes tatuajes"
+        "info tatuajes tatuajes tatuajes"
+        "footer footer footer footer"
+        ;
+        gap: 20px;
+    }
+
+    .tatuajes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        }
+
+    .gridMusic {
+        display: grid;
+        grid-template-columns: 2fr,1fr,1fr;
+        grid-template-areas: 
+        "header header header"
+        "introduccion introduccion introduccion"
+        "musico cancion1 cancion1"
+        "info cancion2 cancion2"
+        "footer footer footer"
+        ;
+        gap: 20px;
+    }
+    .star{
+       
+    }
+    .musico{
+        img{
+            height:100%;
+            width: 100%;
+        }
+    }
+
+    .tatuajes img{
+        width: 300px;
+        height: 400px;
+    }
+
+    .tattooer{
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
     
 }
 
@@ -148,7 +337,7 @@ body{
         grid-template-areas: 
         "header header header"
         "introduccion introduccion introduccion"
-        "caru caru ."
+        "caru caru extra"
         "cosa cosa cosa"
         "cosa3 cosa3 cosa3"
         "cosa2 cosa2 cosa2"
@@ -157,9 +346,3 @@ body{
     }
 }
 
-.therteee{
-    justify-self: center;
-    grid-area: caru;
-    height: 75%;
-    width: 50%;
-}
