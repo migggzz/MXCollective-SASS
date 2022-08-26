@@ -224,7 +224,7 @@ body{
 .flexContainer4{
     padding: 30px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
@@ -234,7 +234,7 @@ body{
 .flexContainer5{
     padding: 30px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -354,6 +354,14 @@ body{
         "footer footer footer"
         ;
         gap: 20px;
+    }
+
+    .flexContainer4{
+        flex-direction: row;
+    }
+
+    .flexContainer5{
+        flex-direction: row;
     }
 }
 

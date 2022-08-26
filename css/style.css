@@ -8,7 +8,7 @@ header .menuHeader ul {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 header .menuHeader li {
@@ -49,7 +49,7 @@ footer ul li a .footerImage {
   height: 40px;
 }
 
-.flexContainer1, .arte2, .flexContainer2, .flexContainer3 {
+.flexContainer1, .standard3, .standard, .arte2, .flexContainer2, .flexContainer3 {
   grid-area: cosa;
   display: flex;
   flex-direction: column;
@@ -132,8 +132,8 @@ body {
   grid-area: tatuajes;
 }
 .tatuajes img {
-  height: fit-content;
-  width: fit-content;
+  height: auto;
+  width: auto;
 }
 
 .pad {
@@ -163,12 +163,16 @@ body {
 }
 
 .star {
-  padding-top: 30px;
+  padding-top: 0px;
   width: 100%;
 }
 
 .musicTrack2 {
   grid-area: cancion2;
+}
+
+.largee {
+  font-size: 50px;
 }
 
 .gridIndex {
@@ -183,6 +187,8 @@ body {
   grid-template-columns: auto;
   grid-template-areas: "header" "introduccion" "artista" "info" "tatuajes" "tatuajes" "tatuajes" "footer";
   gap: 20px;
+  height: 100%;
+  width: 100%;
 }
 
 .gridArt2 {
@@ -199,13 +205,39 @@ body {
   gap: 20px;
 }
 
+.standard2 {
+  grid-area: standard;
+  width: auto;
+}
+.standard2 img {
+  height: 100%;
+  width: 100%;
+}
+
+.standard {
+  grid-area: standard2;
+  padding: 30px;
+}
+
+.standard3 {
+  grid-area: standard3;
+  padding: 30px;
+}
+
+.gridEvents {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "header" "standard" "standard2" "standard3" "footer";
+  gap: 20px;
+}
+
 @media (min-width: 768px) {
   .gridIndex {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "header header header" "introduccion introduccion introduccion" "caru caru extra" "cosa cosa cosa" "cosa3 cosa3 cosa3" "cosa2 cosa2 cosa2" "footer footer footer";
   }
-  .flexContainer1, .flexContainer3, .flexContainer2, .arte2 {
+  .flexContainer1, .flexContainer3, .flexContainer2, .arte2, .standard, .standard3 {
     flex-direction: row;
   }
   .therteee {
@@ -223,14 +255,21 @@ body {
   }
   .gridArt {
     display: grid;
-    grid-template-columns: 1fr, 11r, 1fr, 1fr;
-    grid-template-areas: "header header header header" "introduccion introduccion introduccion introducion" "artista tatuajes tatuajes tatuajes" "artista tatuajes tatuajes tatuajes" "info tatuajes tatuajes tatuajes" "footer footer footer footer";
+    grid-template-columns: 3fr, 1fr, 1fr, 1fr;
+    grid-template-areas: "header header header header" "introduccion introduccion introduccion introducion" "artista tatuajes tatuajes tatuajes" "info tatuajes tatuajes tatuajes" "info tatuajes tatuajes tatuajes" "footer footer footer footer";
     gap: 20px;
   }
   .tatuajes {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-end;
+    align-content: center;
+    justify-content: space-around;
+  }
+  .tatuajes img {
+    width: auto;
+    height: auto;
   }
   .gridMusic {
     display: grid;
@@ -239,16 +278,27 @@ body {
     gap: 20px;
   }
   .musico img {
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    width: 90%;
   }
-  .tatuajes img {
-    width: 300px;
-    height: 400px;
+  .tattooer {
+    padding: 0px;
   }
   .tattooer img {
     width: 100%;
     height: 100%;
+  }
+  .gridEvents {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "header header header" "standard standard standard" "standard2 standard3 standard3" "standard2 standard3 standard3" "footer footer footer";
+    gap: 20px;
+  }
+  .standard {
+    flex-direction: column;
+  }
+  .standard3 {
+    flex-direction: column;
   }
 }
 @media (min-width: 1020px) {
@@ -256,6 +306,14 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "header header header" "introduccion introduccion introduccion" "caru caru extra" "cosa cosa cosa" "cosa3 cosa3 cosa3" "cosa2 cosa2 cosa2" "footer footer footer";
+  }
+}
+@media (min-width: 1250px) {
+  .gridArt {
+    display: grid;
+    grid-template-columns: 3fr, 1fr, 1fr, 1fr;
+    grid-template-areas: "header header header header" "introduccion introduccion introduccion introducion" "artista artista tatuajes tatuajes" "artista artista tatuajes tatuajes" "info tatuajes tatuajes tatuajes" "footer footer footer footer";
+    gap: 20px;
   }
 }
 

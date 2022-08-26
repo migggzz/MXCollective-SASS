@@ -9,7 +9,7 @@ header {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
         }
         li{
@@ -136,8 +136,8 @@ body{
 .tatuajes{
     grid-area: tatuajes;
     img{
-        height:fit-content;
-        width:fit-content;
+        height:auto;
+        width:auto;
     }
 }
 
@@ -165,11 +165,15 @@ body{
     grid-area: cancion1;
 }
 .star{
-    padding-top: 30px;
+    padding-top: 0px;
     width: 100%;
 }
 .musicTrack2{
     grid-area: cancion2;
+}
+
+.largee{
+    font-size: 50px;
 }
 
 .gridIndex{
@@ -202,6 +206,8 @@ body{
     "footer"
     ;
     gap: 20px;
+    height: 100%;
+    width: 100%;
 }
 
 .gridArt2 {
@@ -231,6 +237,41 @@ body{
     ;
     gap: 20px;
 }
+
+.standard2{
+    grid-area: standard;
+    width: auto;
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+.standard{
+    @extend .flexContainer1;
+    grid-area: standard2;
+    padding: 30px;
+}
+
+
+.standard3{
+    @extend .flexContainer1;
+    grid-area: standard3;
+    padding: 30px;
+}
+
+.gridEvents{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "header"
+    "standard"
+    "standard2"
+    "standard3"
+    "footer"
+    ;
+    gap: 20px;
+}
+
 
 @media (min-width: 768px){
     .gridIndex{
@@ -276,12 +317,12 @@ body{
 
     .gridArt {
         display: grid;
-        grid-template-columns: 1fr,11r,1fr,1fr;
+        grid-template-columns: 3fr,1fr,1fr,1fr;
         grid-template-areas: 
         "header header header header"
         "introduccion introduccion introduccion introducion"
         "artista tatuajes tatuajes tatuajes"
-        "artista tatuajes tatuajes tatuajes"
+        "info tatuajes tatuajes tatuajes"
         "info tatuajes tatuajes tatuajes"
         "footer footer footer footer"
         ;
@@ -292,6 +333,13 @@ body{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        align-items:flex-end;
+        align-content: center;
+        justify-content: space-around;
+        img{
+            width: auto;
+            height: auto;
+        }
         }
 
     .gridMusic {
@@ -311,21 +359,38 @@ body{
     }
     .musico{
         img{
-            height:100%;
-            width: 100%;
+            height:50%;
+            width: 90%;
         }
     }
 
-    .tatuajes img{
-        width: 300px;
-        height: 400px;
-    }
-
     .tattooer{
+        padding:0px;
         img{
             width: 100%;
             height: 100%;
         }
+    }
+
+    .gridEvents{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "header header header"
+        "standard standard standard"
+        "standard2 standard3 standard3"
+        "standard2 standard3 standard3"
+        "footer footer footer"
+        ;
+        gap: 20px;
+    }
+
+    .standard{
+        flex-direction: column;
+    }
+
+    .standard3{
+        flex-direction: column;
     }
     
 }
@@ -346,3 +411,18 @@ body{
     }
 }
 
+@media (min-width: 1250px){
+    .gridArt {
+        display: grid;
+        grid-template-columns: 3fr,1fr,1fr,1fr;
+        grid-template-areas: 
+        "header header header header"
+        "introduccion introduccion introduccion introducion"
+        "artista artista tatuajes tatuajes"
+        "artista artista tatuajes tatuajes"
+        "info tatuajes tatuajes tatuajes"
+        "footer footer footer footer"
+        ;
+        gap: 20px;
+    }
+}
