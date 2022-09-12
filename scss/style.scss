@@ -66,7 +66,12 @@ footer{
     @extend .flexContainer1;
     grid-area: cosa3;
     padding: 30px;
+    justify-content: space-around;
     height:auto;
+    div{
+        border: solid 3px red;
+        border-radius: 5px;
+    }
 }
 
 .flexContainer2{
@@ -75,7 +80,7 @@ footer{
     padding: 30px;
     height: auto;
     flex-wrap: nowrap;
-    div{
+    div{   
         padding: 30px;
         margin: 20px;
         background-color: linear-gradient(90deg, #243B55 0%, #334756 100%);
@@ -176,8 +181,15 @@ body{
     font-size: 50px;
 }
 
+.right{
+    text-align: right;
+}
+
 .gridIndex{
     display: grid;
+    border: solid 3px red;
+     border-radius: 5px;
+
     grid-template-columns: auto;
     grid-template-areas: 
     "header"
@@ -293,6 +305,8 @@ body{
     .therteee{
         height: 100%;
         width: 50%;
+        border: solid 3px red;
+     border-radius: 5px;
     }
     header{
         .menuHeader{
@@ -426,3 +440,13 @@ body{
         gap: 20px;
     }
 }
+
+@keyframes example {
+    from {color: black;}
+    to {color: yellow;}
+  }
+  .example2{
+    animation-name: example ;
+    animation-duration: 4s;
+    animation-delay: calc(var(--scroll) * -1s);
+  }
