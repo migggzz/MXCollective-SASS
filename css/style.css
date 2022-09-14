@@ -65,11 +65,6 @@ footer ul li a .footerImage {
   justify-content: space-around;
   height: auto;
 }
-.flexContainer3 div {
-  border: solid 3px red;
-  border-radius: 5px;
-}
-
 .flexContainer2 {
   grid-area: cosa2;
   padding: 30px;
@@ -186,8 +181,6 @@ body {
 
 .gridIndex {
   display: grid;
-  border: solid 3px red;
-  border-radius: 5px;
   grid-template-columns: auto;
   grid-template-areas: "header" "introduccion" "caru" "extra" "cosa3" "cosa2" "footer";
   gap: 20px;
@@ -254,8 +247,6 @@ body {
   .therteee {
     height: 100%;
     width: 50%;
-    border: solid 3px red;
-    border-radius: 5px;
   }
   header .menuHeader ul {
     flex-direction: row;
@@ -334,13 +325,14 @@ body {
     color: black;
   }
   to {
-    color: yellow;
+    color: white;
   }
 }
 .example2 {
   animation-name: example;
-  animation-duration: 4s;
+  animation-duration: 5s;
   animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: infinite;
 }
 
 /*# sourceMappingURL=style.css.map */
